@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Cartón de Bingo con Imágenes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>Generador de Cartón de Bingo con Imágenes</h1>
+
+    <!-- Input para subir imágenes -->
+    <input type="file" id="imageInput" accept="image/*" multiple>
+    <button onclick="generateBingoCard()">Generar Cartón</button>
+
+    <div id="bingo-container">
+        <h2></h2>
+        <div id="bingo-card"></div>
+    </div>
+
+    <!-- Input para el número de cartones -->
+    <label for="numCards">Número de cartones a descargar:</label>
+    <input type="number" id="numCards" min="1" value="1">
+    <button onclick="downloadBingoCards()">Descargar Cartones</button>
+
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p>Créditos a @ccnosnooze en Twitter.</p>
+</footer>
+</html>

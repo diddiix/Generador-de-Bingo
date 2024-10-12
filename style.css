@@ -1,0 +1,68 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+input[type="file"], button, label {
+    display: block;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Contenedor del cartón de bingo */
+#bingo-container {
+    margin-top: 20px;
+    background-image: url('image.png'); /* Establece la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative; /* Posicionamiento relativo para el contenido superpuesto */
+    width: 320px; /* Asegura que el ancho sea suficiente para el cartón */
+    height: 460px; /* Asegura que la altura sea suficiente para el cartón */
+}
+
+#bingo-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Cartón de bingo 3x4 */
+#bingo-card {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+    gap: 3px;
+    position: absolute; /* Hace que el cartón se superponga a la imagen de fondo */
+    top: 194px; /* Alinea el cartón en la parte superior */
+    left: 51%; /* Centra el cartón horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición del cartón */
+}
+
+.bingo-cell img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid white;
+}
